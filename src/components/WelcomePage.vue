@@ -9,7 +9,6 @@
       <li>3. If a circle disappearts with out you clicking it, you lose a life.</li>
       <li>4. You have 3 lives, how long can you last?</li>
     </ul>
-    <button @click="beginGame">Begin</button>
   </div>
 </template>
 
@@ -22,11 +21,7 @@ export default {
     }
   },
   methods: {
-    beginGame(){
-      this.$emit(
-        "beginGame"
-      )
-    }
+    
   }
 }
 

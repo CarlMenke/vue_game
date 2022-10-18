@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <WelcomePage  @beginGame="beginGame"/>
-    <GameContainer :inGame="inGame"/>
+    <WelcomePage />
+    <GameContainer />
   </div>
 </template>
 
@@ -17,13 +17,11 @@ export default {
   },
   data: () =>{
     return {
-      inGame:false
+
     }
   },
   methods: {
-    beginGame(){
-      this.inGame = true;
-    }
+
   }
 }
 </script>
