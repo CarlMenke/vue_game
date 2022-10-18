@@ -82,7 +82,7 @@
             const pause = () =>{
                 return new Promise((resolve)=>{
                     console.log('timer', this.timer)
-                    setTimeout(resolve, this.circleId < 15 ? 900: this.circleId < 30 ? 800: this.circleId < 45? 700 : this.circleId < 60 ? 600 : this.circleId < 75 ? 500 : 400)
+                    setTimeout(resolve, this.circleId < 15 ? 850: this.circleId < 30 ? 750: this.circleId < 45? 650 : this.circleId < 60 ? 550 : this.circleId < 75 ? 500 : 450)
                 })
             }
             const createCircle = () =>{
