@@ -24,7 +24,7 @@
         setTimeout(()=>{
             console.log(document.getElementById(`${this.circle.id}`))
             document.getElementById(`${this.circle.id}`)?this.handleLooseLife():null
-        },3000)
+        },2500)
     },
     methods: {
        handleCircleClick(e){
@@ -48,7 +48,7 @@
         bottom:var(--height);
         left:var(--width);
         animation-name: target;
-        animation-duration: 3.5s;
+        animation-duration: 3s;
         z-index:3;
     }
     @keyframes target {
