@@ -1,18 +1,29 @@
 <template>
     <div class="relative">
-        <div>Your Lives:{{lives}}</div>
-        <div >Score:{{playerScore}}</div>
-        <div>
-            <input placeholder="Height in px" name='height' v-on:input="(e)=>{setHeight(e)}"/>
-            <input placeholder="Width in px" name='width' v-on:input="(e)=>{setWidth(e)}"/>
-            <button @click="changeDimension">Apply</button>
+        <div class="info-box">
+            <div class="info-top">
+                <div class="prefix">Your Lives:</div>
+                <div class="suffix">{{lives}}</div>
+            </div> 
+            <div class="info-top">
+                <div class="prefix">Score:</div>
+                <div class="suffix">{{playerScore}}</div>
+            </div>
+        </div>
+        <div >
+            <input class="button" placeholder="Height in px" name='height' v-on:input="(e)=>{setHeight(e)}"/>
+            <input class="button" placeholder="Width in px" name='width' v-on:input="(e)=>{setWidth(e)}"/>
+            <button class="button" @click="changeDimension">Apply</button>
         </div>
         <div class="game-container">
             <div class="game" >
                 <ClickCircle class="circle" v-for="circle in circleArray" :key="circle.id"  :circle="circle" @handleCircleClick="handleCircleClick" @handleLooseLife="handleLooseLife"/>
             </div>
             <button class="button" v-if="!inGame" @click="startGame">Begin</button>
-            <div v-if="!inGame" >Score:{{playerScore}}</div>
+            <div v-if="!inGame" class="info-top">
+                <div class="prefix">Score:</div>
+                <div class="suffix">{{playerScore}}</div>
+            </div>
             <div v-if="inGame" class="timer">{{timer}}</div>
             <div v-if="inGame" class="lives"></div>
         </div>
@@ -147,11 +158,11 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        top:10vh;
+        top:15vh;
         margin:10px;
-        border:2px solid grey;
+        border: 2px solid #3c8871;
         border-radius: 20px;
-        background-color:rgb(220, 220, 220);
+        background-color: #dbe8e4;
         width:var(--width-game);
         height:var(--height-game)
     }
@@ -188,5 +199,41 @@
     }
     .circle{
         z-index:4;
+    }
+    .info-top{
+        display:flex;
+        flex-flow:row nowrap;
+        align-items: center;
+        justify-content: center;
+        border-radius:5px;
+        border: 2px solid #3c8871;
+        padding:10px;
+        background-color: #e3efeb;
+        margin:5px; 
+    }
+    .info-box{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .button{
+        border-radius:5px;
+        border: 2px solid #3c8871;
+        padding:10px;
+        background-color: #e3efeb;
+        margin:2px;
+    }
+    .button:hover{
+        border: 2px solid #539c86;
+        background-color: #c0dcd2;
+    }
+    .prefix{
+        display:inline;
+        margin:2px
+    }
+    .suffix{
+        display:inline;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin:3px;
     }
   </style>
