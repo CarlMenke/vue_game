@@ -1,7 +1,9 @@
 <template>
   <div >
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1> Welcome To Quick Click </h1>
+    <div class="title">
+      <h1> Welcome To Quick Click </h1>
+      <img alt="Vue logo" src="../assets/target.png">
+    </div>
     <h3>Rules:</h3>
     <ul>
       <li>1. When a circle appears, click it as fast as you can.</li>
@@ -31,5 +33,11 @@ export default {
 <style scoped>
 li{
   list-style: none;
+}
+.title{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 </style>
