@@ -6,14 +6,15 @@
     "serve": "vue-cli-service serve",
     "start": "npm run serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-
+    "lint": "vue-cli-service lint",
+    "heroku-postinstall": "npm install && npm run build"
   },
+  "heroku-postinstall": "npm install && npm run build",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
     "vue-hotkeys-rt": "^0.2.0",
-    "@vue-cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
