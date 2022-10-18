@@ -1,7 +1,7 @@
 <template>
   <div >
     <div class="title">
-      <h1> Aim Trainer </h1>
+      <h1> Aim Helper </h1>
       <img alt="Vue logo" src="../assets/target.png">
     </div>
     <h3>Rules:</h3>
