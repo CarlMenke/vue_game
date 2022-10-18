@@ -1,6 +1,6 @@
 <template>
-    <div v-if="!clicked" :id="this.circle.id" class="circle-container">
-        <img  :id="this.circle.id" :src="target" class="target" @click="(e)=>{handleCircleClick(e)}"/>
+    <div v-if="!clicked" :id="this.circle.id" class="circle-container" @click="(e)=>{handleCircleClick(e)}">
+        <img  :id="this.circle.id" :src="target"/>
     </div>
   </template>
   
@@ -46,16 +46,14 @@
     .circle-container{
         position:absolute;
         bottom:var(--height);
-        left:var(--width)
+        left:var(--width);
+        animation-name: target;
+        animation-duration: 3.5s;
+        z-index:3;
     }
     @keyframes target {
         0% {scale:0;}
         50% {scale:1;}
         100% {scale:0;}
-    }
-    .target{
-        animation-name: target;
-        animation-duration: 3.5s;
-        z-index:3;
     }
   </style>
