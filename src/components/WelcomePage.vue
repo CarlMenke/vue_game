@@ -26,10 +26,8 @@ export default {
     
   }
 }
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 li{
   list-style: none;
@@ -39,5 +37,11 @@ li{
   flex-flow:row nowrap;
   justify-content: center;
   align-items: center;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+
 }
 </style>

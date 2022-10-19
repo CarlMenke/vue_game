@@ -221,6 +221,7 @@
         padding:10px;
         background-color: #e3efeb;
         margin:2px;
+        width:20%;
     }
     .button:hover{
         border: 2px solid #539c86;

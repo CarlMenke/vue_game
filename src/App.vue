@@ -33,6 +33,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #3c8871;
-  margin-top: 60px;
 }
 </style>
